@@ -1,0 +1,21 @@
+<h1>Add a new playlist!</h1>
+
+<form action="/playlists" method="POST">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="name">Number of Tracks: </label>
+        <input type="text" name="numberOfTracks">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<h2>Playlists:</h2>
+
+{{#each playlists}}
+    <p><b>Name</b>: {{Name}}, <b># of Tracks</b>: {{NumberOfTracks}}</p>
+{{/each}}
